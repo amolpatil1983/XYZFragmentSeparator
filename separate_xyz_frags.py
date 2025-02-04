@@ -67,4 +67,5 @@ def extract_fragments_from_xyz(file_path, cutoff=1.2):
             io.write(f"{basename}_frag_{idx + 1}.xyz", fragment_atoms)
             print(f"Fragment {idx + 1} saved as {basename}_frag_{idx + 1}.xyz")
 
+# Example usage.
 extract_fragments_from_xyz("mymol.xyz")

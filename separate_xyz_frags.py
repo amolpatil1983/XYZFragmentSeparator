@@ -9,7 +9,7 @@ import shutil
 
 """
 Separates fragments from an xyz file into individual .xyz files, if any.
-Uses numpy, ase, scipy and shutil.
+Uses numpy, ASE, scipy and shutil.
 Written By: Dr. Amol Patil, Chuo University, Japan 
 """
 

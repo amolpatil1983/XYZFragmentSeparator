@@ -7,6 +7,12 @@ from ase.neighborlist import neighbor_list
 from ase.geometry.analysis import Analysis
 import shutil
 
+"""
+Separates fragments from an xyz file into individual .xyz files, if any.
+Uses numpy, ase, scipy and shutil.
+Written By: Dr. Amol Patil, Chuo University, Japan 
+"""
+
 def get_ase_adjascency_matrix(inp_xyz_fl):
     ase_mol = read(inp_xyz_fl)
     symbols = ase_mol.get_chemical_symbols()

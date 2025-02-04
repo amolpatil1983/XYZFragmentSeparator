@@ -43,7 +43,8 @@ def group_fragments_by_connectivity(adjacency_matrix):
 
     return fragments
 
-def replace(xyzf):
+# This part has been included for AFIR type .xyz files
+def replace_brackets(xyzf):
     with open(xyzf,'r') as myxyz:
         with open('xyz_dummy.xyz','w') as mynewxyz:
             for line in myxyz.readlines():
@@ -54,7 +55,8 @@ def replace(xyzf):
 
 def extract_fragments_from_xyz(file_path, cutoff=1.2):
     basename = file_path.split('.')[0]
-    replace(file_path)
+    # Uncomment following if you are dealing with AFIR output .xyz
+    #replace_brackets(file_path)
     atoms = io.read(file_path)
     adjacency_matrix, symbols, natoms = get_ase_adjascency_matrix(file_path)
     fragments = group_fragments_by_connectivity(adjacency_matrix)
